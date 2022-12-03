@@ -11,11 +11,15 @@ local entities={
     CustomEntities={"Grundge","Smiler","Trashbag", "None"},
     RegularEntities={"All", "Ambush", "Eyes", "Glitch", "Halt", "Hide", "Random", "None", "Rush", "Screech", "Seek", "Shadow", "Timothy"}
 }
+writefile("interactedWithDiscordPrompt.txt","yes interacted")
 for _, tb in pairs(entities) do table.sort(tb) end
 if not isfile("interactedWithDiscordPrompt.txt") then
     writefile("interactedWithDiscordPrompt.txt",".")
     local Inviter = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
-    print("Come on, you dont have to do this.")
+    Inviter.Prompt({
+        name = "Zepsyy's Server",
+        invite = "https://discord.gg/zepsyy",
+    })
 end
 --#endregion
 
